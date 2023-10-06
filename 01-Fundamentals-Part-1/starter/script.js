@@ -46,8 +46,41 @@ console.log(age);
 const birthYear = 1993;
 // birthYear = 1992;
 // const job;
-*/
 
 const ageSahan = 2037 - 1993;
 const ageKaush = 2037 - 1995;
 console.log(ageSahan, ageKaush);
+
+
+const now = 2037;
+const ageSahan = now - 1993;
+const ageKaushi = now - 1995;
+
+console.log(now - 1993 > now - 1995);
+
+let x, y;
+x = y = 25 - 10 - 5;
+console.log(x,y)
+
+const averageAge = (ageSahan + ageKaushi) /2;
+console.log(ageSahan , ageKaushi, averageAge);
+*/
+
+const fistName = "Sahan"
+const job = "QA engineer"
+const birthYear= 1993;
+const year = 2023;
+
+const sahan = "I'm "+ fistName+ ', a ' + (year- birthYear) +' years old '+job +'!'
+console.log(sahan)
+
+const sahanNew = `I'm ${fistName}, a ${year-birthYear} years old ${job}!`
+console.log(sahanNew)
+
+console.log('string with \n\
+multiple \n\
+lines');
+
+console.log(`String with
+multiple
+lines`)
