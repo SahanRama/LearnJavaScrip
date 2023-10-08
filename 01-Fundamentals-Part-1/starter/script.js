@@ -64,7 +64,7 @@ console.log(x,y)
 
 const averageAge = (ageSahan + ageKaushi) /2;
 console.log(ageSahan , ageKaushi, averageAge);
-*/
+
 
 const fistName = "Sahan"
 const job = "QA engineer"
@@ -84,3 +84,35 @@ lines');
 console.log(`String with
 multiple
 lines`)
+
+
+const age = 15;
+
+if (age >= 18){
+    console.log('Kaushi can start driving lessons 🫡 🚗')
+}
+else{
+    const yearsLeft = 18 - age;
+    console.log(`Kash is too young. Wait another ${yearsLeft} years. 🙂`)
+}
+*/
+
+// convert string to number
+const inputYear = "1991";
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+console.log(Number("12.23"));
+
+console.log(Number("Sahan"));
+
+//convert number to string
+console.log(String(23), 23);
+
+//type coercion
+console.log("I'm " + 23 + " years old!");
+console.log("23" - "10" - 3);
+console.log("23" * "2");
+
+let n = "1" + 1; //11
+n = n - 1; // 11-1 = 10
+console.log(n);
