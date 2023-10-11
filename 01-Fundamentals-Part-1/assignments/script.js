@@ -14,12 +14,15 @@ console.log(language);
 language = "Sinhala";
 console.log(language);
 
-const halfPopulation = population/2;
-console.log(halfPopulation) 
- console.log(population+1)
+const halfPopulation = population / 2;
+console.log(halfPopulation);
+console.log(population + 1);
 
 const finlandPopulation = 600000;
-console.log("Does my country population more than finland? " , finlandPopulation>population)
+console.log(
+  "Does my country population more than finland? ",
+  finlandPopulation > population
+);
 
 /** 
 const numNeighbours = Number(prompt("How many neighbor countries does your country have?"));
@@ -34,8 +37,8 @@ else if(numNeighbours > 1){
 }
 */
 
-if (language ==='english' && population < 500000 && !isIsland){
-    console.log(`You should live in ${country}`  )
-}else{
-    console.log(`${country} does not meet your criteria :(`)
+if (language === "english" && population < 500000 && !isIsland) {
+  console.log(`You should live in ${country}`);
+} else {
+  console.log(`${country} does not meet your criteria :(`);
 }
