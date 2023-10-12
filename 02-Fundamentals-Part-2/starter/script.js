@@ -274,7 +274,7 @@ Create a calcBMI method on each object to calculate the BMI (the same method on 
 Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!".
 
 TEST DATA: Marks weighs 78 kg and is 1.69 m tall. John weighs 92 kg and is 1.95 m tall.
- */
+
 
 const mark = {
   fullName: "Mark Miller",
@@ -302,3 +302,169 @@ mark.calcBMI() > john.calcBMI()
   : console.log(
       `${john.fullName}'s bmi (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})`
     );
+ 
+
+// console.log("Lifting weights repetition 1 🏋🏼‍♀️");
+// console.log("Lifting weights repetition 2 🏋🏼‍♀️");
+// console.log("Lifting weights repetition 3 🏋🏼‍♀️");
+// console.log("Lifting weights repetition 4 🏋🏼‍♀️");
+// console.log("Lifting weights repetition 5 🏋🏼‍♀️");
+// console.log("Lifting weights repetition 6 🏋🏼‍♀️");
+
+// for loop keeps running while condition is TRUE
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetition ${rep} 🏋🏼‍♀️`);
+}
+
+const sahanArray = [
+  "Sahan",
+  "Ramanayake",
+  2023 - 1993,
+  "QA Engineer",
+  ["Tharinda", "Shermal", "Hasthaka"],
+  true,
+];
+
+const types = [];
+
+for (let i = 0; i < sahanArray.length; i++) {
+  console.log(sahanArray[i], typeof sahanArray[i]);
+
+  // Filling types array
+  //   types[i] = typeof sahanArray[i];
+  types.push(typeof sahanArray[i]);
+}
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+// continue and break
+console.log("---- ONLY STRING ----");
+for (let i = 0; i < sahanArray.length; i++) {
+  if (typeof sahanArray[i] !== "string") continue;
+  console.log(sahanArray[i], typeof sahanArray[i]);
+}
+
+console.log("---- BREAK WITH NUMBERS ----");
+for (let i = 0; i < sahanArray.length; i++) {
+  if (typeof sahanArray[i] === "number") break;
+  console.log(sahanArray[i], typeof sahanArray[i]);
+}
+
+
+// reverse array
+const sahanArray = [
+    "Sahan",
+    "Ramanayake",
+    2023 - 1993,
+    "QA Engineer",
+    ["Tharinda", "Shermal", "Hasthaka"],
+  ];
+
+  for(let i= sahanArray.length -1 ; i >=0 ; i--){
+    console.log(sahanArray[i])
+  }
+
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`------ Starting exercise ${exercise}`);
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋🏼‍♀️`);
+  }
+}
+
+
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetition ${rep} 🏋🏼‍♀️`);
+// }
+
+let rep = 1;
+while (rep <= 10) {
+//   console.log(`WHILE : Lifting weights repetition ${rep} 🏋🏼‍♀️`);
+  rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while(dice !== 6){
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+}
+
+
+CHALLENGE #4
+Let's improve Steven's tip calculator even more, this time using loops!
+
+Your tasks:
+
+Create an array called bills containing all 10 test bill values.
+
+Create empty arrays for the tips and the totals (tips and totals)
+
+Use the calcTip function we wrote before (included in the starter code) to calculate tips and total values (bill + tip) for every bill value in the bills array. Use a for loop to perform the 10 calculations!
+
+
+
+TEST DATA: 22, 295, 176, 440, 37, 105, 10, 1100, 86, and 52.
+
+
+
+BONUS:
+
+Write a function calcAverage which takes an array called arr as an argument. This function calculates the average of all numbers in the given array. This is a DIFFICULT challenge (we haven't done this before)! Here is how to solve it if you feel like it:
+
+First, you will need to add up all values in the array. To do the addition, start by creating a variable sum that starts at 0. Then loop over the array using a for loop. In each iteration, add the current value to the sum variable. This way, by the end of the loop, you have all values added together.
+
+To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements).
+
+Call the function with the totals array.
+
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const tips = [];
+const totals = [];
+
+const calcTip = function (bill) {
+  if (bill >= 50 && bill <= 300) {
+    return bill * 0.15;
+  } else {
+    return bill * 0.2;
+  }
+};
+
+const calcTotal = function () {
+  for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+
+    let total = bills[i] + tip;
+    totals.push(total);
+    console.log(`${bills[i]} + ${tip} = ${total}`);
+  }
+
+  console.log(bills);
+  console.log(tips);
+  console.log(totals);
+};
+
+calcTotal();
+
+const calcAverage = function (arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    // sum = sum + arr[i];
+    sum += arr[i];
+  }
+  return sum / arr.length
+  
+};
+
+console.log(calcAverage(totals));
+*/
